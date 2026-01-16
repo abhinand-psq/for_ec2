@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  //- Container for full-screen impact
+  main(style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle, #1a1a2e 0%, #0f0f1b 100%); color: white; font-family: 'Segoe UI', Roboto, sans-serif; text-align: center; margin: -8px; overflow: hidden;")
+    
+    //- Massive Title with text shadow for depth
+    h1(style="font-size: 12vw; margin: 0; line-height: 0.8; text-transform: uppercase; font-weight: 900; letter-spacing: -5px; text-shadow: 0px 20px 50px rgba(0,0,0,0.5);")= title
+    
+    //- Stylish Subtitle
+    p(style="font-size: 2rem; font-weight: 200; color: #4ecca3; letter-spacing: 10px; margin-top: 20px; text-transform: uppercase;") 
+      | Welcome to #{title}
+
+    //- Decorative Accent Line
+    div(style="width: 100px; height: 4px; background: #4ecca3; margin-top: 40px; border-radius: 2px;")

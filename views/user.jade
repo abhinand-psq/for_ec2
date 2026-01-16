@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  //- Main Container
+  section(style="padding: 100px 20px; background-color: #0f0f1b; color: white; font-family: 'Segoe UI', sans-serif; text-align: center;")
+    
+    //- Huge Section Header
+    h2(style="font-size: 5vw; font-weight: 800; margin-bottom: 60px; text-transform: uppercase; letter-spacing: -2px;") 
+      | User 
+      span(style="color: #4ecca3;") Reviews
+
+    //- Flex Grid for Reviews
+    div(style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;")
+      
+      //- Review Card 1
+      div(style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);")
+        div(style="font-size: 3rem; color: #4ecca3; line-height: 1; margin-bottom: 10px;") “
+        p(style="font-size: 1.2rem; line-height: 1.6; font-style: italic; margin-bottom: 20px;") "This is the most incredible experience I've had with #{title}. The scale is absolutely massive!"
+        h4(style="margin: 0; font-size: 1.1rem; color: #4ecca3;") — Alex Johnson
+        p(style="margin: 0; font-size: 0.8rem; opacity: 0.5; text-transform: uppercase;") CEO, TechFlow
+
+      //- Review Card 2
+      div(style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);")
+        div(style="font-size: 3rem; color: #4ecca3; line-height: 1; margin-bottom: 10px;") “
+        p(style="font-size: 1.2rem; line-height: 1.6; font-style: italic; margin-bottom: 20px;") "Beautifully designed and extremely easy to use. I can't imagine going back to anything else."
+        h4(style="margin: 0; font-size: 1.1rem; color: #4ecca3;") — Sarah Miller
+        p(style="margin: 0; font-size: 0.8rem; opacity: 0.5; text-transform: uppercase;") Creative Director
+
+      //- Review Card 3
+      div(style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3);")
+        div(style="font-size: 3rem; color: #4ecca3; line-height: 1; margin-bottom: 10px;") “
+        p(style="font-size: 1.2rem; line-height: 1.6; font-style: italic; margin-bottom: 20px;") "The attention to detail in #{title} is unmatched. It truly stands out in the market."
+        h4(style="margin: 0; font-size: 1.1rem; color: #4ecca3;") — Jordan Smith
+        p(style="margin: 0; font-size: 0.8rem; opacity: 0.5; text-transform: uppercase;") Software Engineer
