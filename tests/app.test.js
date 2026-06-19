@@ -20,6 +20,14 @@ describe('Express Router Integration Tests', () => {
     expect(response.text).toContain('Alex Johnson');
   });
 
+  // Test Case 8: Testing the Services route (GET /services)
+  test('GET /services should return 200 OK and render services page', async () => {
+    const response = await request(app).get('/services');
+    expect(response.statusCode).toBe(200);
+    expect(response.text).toContain('Services');
+    expect(response.text).toContain('Cloud Hosting');
+  });
+
   // Test Case 6: Testing 404 fallback for invalid routes
   test('GET /invalid-route should return 404 Not Found', async () => {
     const response = await request(app).get('/invalid-route');
