@@ -1,4 +1,4 @@
-const { add, subtract, multiply } = require('../utils/math');
+const { add, subtract, multiply, divide } = require('../utils/math');
 
 describe('Math Utility Unit Tests', () => {
 
@@ -18,6 +18,12 @@ describe('Math Utility Unit Tests', () => {
   test('should correctly multiply two numbers hoooo wanot', () => {
     const result = multiply(4, 3);
     expect(result).toBe(12);
+  });
+
+  // Test Case 7: Testing division
+  test('should correctly divide two numbers', () => {
+    const result = divide(6, 2);
+    expect(result).toBe(3);
   });
 
 });
