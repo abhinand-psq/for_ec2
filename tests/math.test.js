@@ -1,7 +1,7 @@
 const { add, subtract, multiply } = require('../utils/math');
 
 describe('Math Utility Unit Tests', () => {
-  
+
   // Test Case 1: Testing addition
   test('should correctly add two numbers', () => {
     const result = add(2, 3);
@@ -15,7 +15,7 @@ describe('Math Utility Unit Tests', () => {
   });
 
   // Test Case 3: Testing multiplication
-  test('should correctly multiply two numbers', () => {
+  test('should correctly multiply two numbers hoooo wanot', () => {
     const result = multiply(4, 3);
     expect(result).toBe(12);
   });
