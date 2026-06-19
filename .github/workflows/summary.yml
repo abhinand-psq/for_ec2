@@ -1,0 +1,44 @@
+name: Code Summary
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      models: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get git diff
+        run: |
+          {
+            echo "DIFF<<EOF"
+            git diff ${{ github.event.before }} ${{ github.sha }}
+            echo "EOF"
+          } >> "$GITHUB_ENV"
+
+      - name: Run AI inference
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          prompt: |
+            You are a senior software engineer.
+
+            Analyze the following git diff and summarize:
+            - New features
+            - Bug fixes
+            - Refactoring
+            - Configuration changes
+
+            Git Diff:
+            ${{ env.DIFF }}
+
+      - name: Print output
+        run: echo "${{ steps.inference.outputs.response }}"
