@@ -15,7 +15,7 @@ describe('Math Utility Unit Tests', () => {
   });
 
   // Test Case 3: Testing multiplication
-  test('should correctly multiply two numbers hoooo wanot', () => {
+  test('should correctly multiply two numbers hoooo jnjnjkwanot', () => {
     const result = multiply(4, 3);
     expect(result).toBe(12);
   });
